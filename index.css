@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #222222;
+}
+
+/* Header and navigation */
+
+.page-header {
+    background-color: #222222;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Main page */
+
+.page-content {
+    width: 84%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Search area */
+
+.intro-section {
+    background-color: white;
+    border: 1px solid #d0d0d0;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.intro-section h1 {
+    margin-top: 0;
+}
+
+.search-form {
+    display: flex;
+    max-width: 500px;
+    margin-top: 18px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #999999;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #222222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #444444;
+}
+
+/* Actor cards */
+
+.actor-section h2 {
+    margin-bottom: 20px;
+}
+
+.actor-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 22px;
+}
+
+.actor-card {
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.actor-photo {
+    height: 180px;
+    background-color: #dddddd;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actor-details {
+    padding: 18px;
+}
+
+.actor-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.actor-description {
+    min-height: 48px;
+    line-height: 1.5;
+}
+
+.actor-price {
+    margin-top: 15px;
+}
+
+.view-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 9px 15px;
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+}
+
+.view-button:hover {
+    background-color: #444444;
+}
+
+/* No search results */
+
+.no-results {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+
+.no-results a {
+    color: #222222;
+}
+
+/* Footer */
+
+.page-footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* Smaller screens */
+
+@media screen and (max-width: 650px) {
+
+    .page-header {
+        display: block;
+    }
+
+    .navigation {
+        margin-top: 15px;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .page-content {
+        width: 92%;
+    }
+
+    .search-form {
+        display: block;
+    }
+
+    .search-form input {
+        width: 100%;
+    }
+
+    .search-form button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
