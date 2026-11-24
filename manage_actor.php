@@ -105,6 +105,7 @@ if (isset($_POST["remove_actor"])) {
 }
 
 
+
 // Get active actors.
 $sql = "
     SELECT
@@ -281,9 +282,15 @@ $actors = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 <td>
             
-                    <a href="editactor.php?id=<?php echo $actor["ActorID"]; ?>">
+                    <button>
+                    <a 
+                        class="edit-button"
+                        href="editactor.php?id=<?php echo $actor["ActorID"]; ?>"
+                        >
+                        
                         Edit Actor
                     </a>
+                    </button>
 
                     <form method="POST" class="remove-form">
 
